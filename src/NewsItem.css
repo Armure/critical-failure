@@ -1,0 +1,26 @@
+.NewsItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
+  box-sizing: border-box;
+  font-size: 12px;
+  background-color: #444;
+  color: white;
+}
+
+.NewsItem-item {
+  cursor: pointer;
+  color: #c600ff;
+}
+
+.NewsItem-item:hover {
+  color: white;
+}
+
+.NewsItem-item:link {
+  text-decoration: none;
+}
