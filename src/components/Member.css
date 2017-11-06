@@ -1,0 +1,6 @@
+.Member {
+  width: 20%;
+  height: 20vw;
+  background-color: #333;
+  margin: calc(40% / 6);
+}

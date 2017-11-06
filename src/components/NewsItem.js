@@ -6,6 +6,7 @@ const classColors = [
   '#FFFFFF', '#C41F3B', '#0070DE', '#69CCF0', '#9482C9',
   '#00FF96', '#FF7D0A', '#A330C9'
 ]
+
 class NewsItem extends React.Component {
   constructor (props) {
     super(props)

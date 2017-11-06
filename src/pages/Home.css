@@ -1,0 +1,18 @@
+.Home {
+  text-align: center;
+}
+
+.Home-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #eee;
+}
+
+.Home-loot {
+  width: 50%;
+}
+
+.Home-logs {
+  width: 50%;
+}
