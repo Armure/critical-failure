@@ -5,11 +5,25 @@
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  width: 50%;
+  width: 80%;
   box-sizing: border-box;
   font-size: 12px;
   background-color: #444;
   color: white;
+  margin-left: 10%;
+}
+
+.NewsItem-info {
+  cursor: pointer;
+  color: #87B6A7;
+}
+
+.NewsItem-info:hover {
+  color: white !important;
+}
+
+.NewsItem-info:link {
+  text-decoration: none;
 }
 
 .NewsItem-item {

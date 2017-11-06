@@ -1,0 +1,47 @@
+.LogsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 12px;
+  background-color: #444;
+  color: white;
+  margin-left: 10%;
+}
+
+.LogsContainer-title {
+  font-size: 18px;
+}
+
+.LogsContainer-latest {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.LogsContainer-latest-title {
+  margin: 5px;
+  color: #87B6A7;
+}
+
+.LogsContainer-latest:hover {
+  color: #FFFFFF !important;
+}
+
+.LogsContainer-latest-date {
+  margin: 5px;
+  color: white;
+}
+
+.LogsContainer-latest-live {
+  margin: 5px;
+  color: red;
+}
