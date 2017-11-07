@@ -1,6 +1,13 @@
 .Member {
-  width: 20%;
-  height: 20vw;
+  width: 25%;
+  height: 25vw;
   background-color: #333;
-  margin: calc(40% / 6);
+  margin: calc(25% / 6);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 20px 0;
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
 }
