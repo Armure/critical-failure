@@ -2,16 +2,27 @@ import React from 'react'
 import Member from '../components/Member'
 import './Members.css'
 
-const data = [
+const list = [
   {name: 'Atroce', role: 'dps', traitorRank: 1},
   {name: 'Boltin', role: 'dps', traitorRank: 1},
-  {name: 'Spookieboogie', role: 'dps', traitorRank: 1},
-  {name: 'Krompobulous', role: 'tank', traitorRank: 3}
+  {name: 'Fuusan', role: 'dps', traitorRank: 1},
+  {name: 'Krombôpulos', role: 'tank', traitorRank: 3},
+  {name: 'Nemure', role: 'healer', traitorRank: 1},
+  {name: 'Papie', role: 'healer', traitorRank: 1},
+  {name: 'Rosty', role: 'dps', traitorRank: 1},
+  {name: 'Spookyboogie', role: 'dps', traitorRank: 1},
+  {name: 'Virb', role: 'dps', traitorRank: 1},
+  {name: 'Wesleh', role: 'tank', traitorRank: 2}
 ]
 
 class Members extends React.Component {
   getMembers () {
-    return data.map(m => <Member key={m.name} name={m.name} role={m.role} rank={m.traitorRank} />)
+    const {data} = this.props
+    if (!data) return null
+    return list.map(m => {
+      const character = data.filter(c => c.name === m.name)[0]
+      return <Member key={m.name} character={character} name={m.name} role={m.role} rank={m.traitorRank} />
+    })
   }
 
   render() {

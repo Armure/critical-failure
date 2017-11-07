@@ -6,8 +6,8 @@ export default class NavMenu extends React.Component {
   render () {
     return (
       <div className='NavMenu'>
-        <Link className='NavMenu-item' to='members'>
-          Members
+        <Link className='NavMenu-item' to='raiders'>
+          Raiders
         </Link>
         <h1 className='NavMenu-item'>
           Progression
