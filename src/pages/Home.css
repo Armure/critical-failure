@@ -10,9 +10,10 @@
 }
 
 .Home-loot {
-  width: 50%;
+  position: relative;
+  width: 70%;
 }
 
 .Home-logs {
-  width: 50%;
+  width: 30%;
 }
