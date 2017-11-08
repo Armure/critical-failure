@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import Members from './pages/Members'
+import Progression from './pages/Progression'
 import NavMenu from './components/NavMenu'
 import logo from './assets/guild_logo_white.svg'
 import './App.css'
@@ -44,6 +45,7 @@ class App extends React.Component {
         <NavMenu />
         <Route exact path='/' component={() => <Home news={news} members={members} />} />
         <Route path='/raiders' component={() => <Members data={members} />} />
+        <Route path='/progression' component={() => <Progression />} />
       </div>
     )
   }

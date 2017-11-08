@@ -12,9 +12,9 @@ export default class NavMenu extends React.Component {
         <Link className='NavMenu-item' to='raiders'>
           Raiders
         </Link>
-        <h1 className='NavMenu-item'>
+        <Link className='NavMenu-item' to='progression'>
           Progression
-        </h1>
+        </Link>
       </div>
     )
   }
