@@ -1,7 +1,9 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
+import About from './pages/About'
 import Members from './pages/Members'
+import Progression from './pages/Progression'
 import NavMenu from './components/NavMenu'
 import logo from './assets/guild_logo_white.svg'
 import './App.css'
@@ -32,7 +34,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {news, members} = this.state
+    const {members} = this.state
     return (
       <div className='App'>
         <header className='App-header'>
@@ -42,8 +44,10 @@ class App extends React.Component {
           </Link>
         </header>
         <NavMenu />
-        <Route exact path='/' component={() => <Home news={news} members={members} />} />
+        <Route exact path='/' component={() => <Home />} />
+        <Route path='/about' component={() => <About />} />
         <Route path='/raiders' component={() => <Members data={members} />} />
+        <Route path='/progression' component={() => <Progression />} />
       </div>
     )
   }

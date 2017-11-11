@@ -5,12 +5,10 @@
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  width: 80%;
   box-sizing: border-box;
   font-size: 12px;
   background-color: #444;
   color: white;
-  margin-left: 10%;
 }
 
 .NewsItem-info {

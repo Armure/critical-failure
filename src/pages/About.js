@@ -1,9 +1,9 @@
 import React from 'react'
 import NewsItem from '../components/NewsItem'
 import LogsContainer from '../components/LogsContainer'
-import './Home.css'
+import './About.css'
 
-export default class Home extends React.Component {
+export default class About extends React.Component {
   render() {
     return (
       <div className='Home'>
