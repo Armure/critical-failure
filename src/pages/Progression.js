@@ -1,6 +1,5 @@
 import React from 'react'
 import BossItem from '../components/BossItem'
-import bossPics from '../constants/BossPics'
 import './Progression.css'
 
 class Progression extends React.Component {
@@ -31,7 +30,7 @@ class Progression extends React.Component {
 
   getBossItems () {
     const {bosses} = this.state
-    return bosses.map(boss => <BossItem key={boss.id} kills={boss.heroicKills} image={bossPics[boss.name]} />)
+    return bosses.map(boss => <BossItem key={boss.id} kills={boss.heroicKills} name={boss.name} />)
   }
 
   render() {

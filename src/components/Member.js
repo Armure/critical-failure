@@ -1,4 +1,5 @@
 import React from 'react'
+import rolePics from '../constants/RolePics'
 import './Member.css'
 
 const classColors = [
@@ -15,12 +16,14 @@ export default class Member extends React.Component {
 
   render () {
     const {name, role, rank, character} = this.props
+    const roleImage = rolePics[role]
     const main = character.thumbnail.replace(/avatar/gi, 'main')
     const image = `https://render-us.worldofwarcraft.com/character/${main}`
     const link = this.getArmoryLink(character.realm, character.name)
     return (
       <a className='Member' href={link} target='_blank'>
         <div className='Member-image-container'>
+          <img className='Member-role' src={roleImage} alt={role} />
           <div className='Member-image' style={{backgroundImage: `url(${image})`}} />
         </div>
         <div className='Member-info'>
