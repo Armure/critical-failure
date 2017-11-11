@@ -1,11 +1,12 @@
 import React from 'react'
-// import BossItem from '../components/BossItem'
+import BossItem from '../components/BossItem'
+import bossPics from '../constants/BossPics'
 import './Progression.css'
 
 class Progression extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {bosses: null}
+    this.state = {bosses: [], name: ''}
   }
 
   componentDidMount () {
@@ -13,8 +14,8 @@ class Progression extends React.Component {
       const raids = JSON.parse(response).progression.raids
       const recentRaid = raids[raids.length - 1]
       const bosses = recentRaid.bosses
-      console.log(bosses)
-      this.setState({bosses})
+      const name = recentRaid.name
+      this.setState({bosses, name})
     })
   }
 
@@ -28,9 +29,21 @@ class Progression extends React.Component {
     })
   }
 
+  getBossItems () {
+    const {bosses} = this.state
+    return bosses.map(boss => <BossItem key={boss.id} kills={boss.heroicKills} image={bossPics[boss.name]} />)
+  }
+
   render() {
+    const {name} = this.state
     return (
-      <div className='Members'>
+      <div className='Progression'>
+        <div className='Progression-raid'>
+          <h1 className='Progression-name'>{name}</h1>
+        </div>
+        <div className='Progression-bosses'>
+          {this.getBossItems()}
+        </div>
       </div>
     )
   }
