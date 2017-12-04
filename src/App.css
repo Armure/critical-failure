@@ -3,9 +3,30 @@
 }
 
 .App-header {
-  background-color: #222;
+  position: relative;
   padding: 20px;
   color: white;
+}
+
+.App-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('./assets/cover_photo.jpg') center no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.App-overlay {
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .App-name {
@@ -13,20 +34,19 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  cursor: default;
 }
 
 .App-logo {
   height: 80px;
-  cursor: pointer;
 }
 
 .App-title {
   font-size: 2.5em;
   margin: 20px;
-  cursor: pointer;
   color: white;
 }
 
 .App-title:hover {
-  
+
 }

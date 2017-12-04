@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
-import About from './pages/About'
 import Members from './pages/Members'
 import Progression from './pages/Progression'
 import NavMenu from './components/NavMenu'
@@ -38,14 +37,16 @@ class App extends React.Component {
     return (
       <div className='App'>
         <header className='App-header'>
+          <div className='App-background'>
+            <div className='App-overlay' />
+          </div>
           <Link className='App-name' to='/'>
             <img src={logo} className='App-logo' alt='logo' />
             <h1 className='App-title'>Critical Failure</h1>
           </Link>
+          <NavMenu />
         </header>
-        <NavMenu />
         <Route exact path='/' component={() => <Home />} />
-        <Route path='/about' component={() => <About />} />
         <Route path='/raiders' component={() => <Members data={members} />} />
         <Route path='/progression' component={() => <Progression />} />
       </div>

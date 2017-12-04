@@ -5,14 +5,17 @@ import './Members.css'
 const list = [
   {name: 'Atroce', role: 'dps', traitorRank: 1},
   {name: 'Boltin', role: 'dps', traitorRank: 1},
+  {name: 'Blackfoxrun', role: 'dps', traitorRank: 2},
   {name: 'Fuusan', role: 'dps', traitorRank: 1},
+  {name: 'Krazeturtle', role: 'dps', traitorRank: 5},
   {name: 'Krombôpulos', role: 'tank', traitorRank: 3},
   {name: 'Nemure', role: 'healer', traitorRank: 1},
   {name: 'Papie', role: 'healer', traitorRank: 1},
   {name: 'Rosty', role: 'dps', traitorRank: 1},
   {name: 'Spookyboogie', role: 'dps', traitorRank: 1},
   {name: 'Virb', role: 'dps', traitorRank: 1},
-  {name: 'Wesleh', role: 'tank', traitorRank: 2}
+  {name: 'Wesleh', role: 'tank', traitorRank: 2},
+  {name: 'Zealnin', role: 'dps', traitorRank: 1}
 ]
 
 class Members extends React.Component {

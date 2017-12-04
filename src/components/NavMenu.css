@@ -2,11 +2,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #222;
 }
 
 .NavMenu-item {
-  color: #aaa;
+  color: #ccc;
   font-size: 22px;
   cursor: pointer;
   text-decoration: none;
