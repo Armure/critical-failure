@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.b44c1cfd.css",
-  "main.css.map": "static/css/main.b44c1cfd.css.map",
-  "main.js": "static/js/main.9a98245c.js",
-  "main.js.map": "static/js/main.9a98245c.js.map",
+  "main.css": "static/css/main.abb25af5.css",
+  "main.css.map": "static/css/main.abb25af5.css.map",
+  "main.js": "static/js/main.95cc048f.js",
+  "main.js.map": "static/js/main.95cc048f.js.map",
   "static/media/Demonic.jpg": "static/media/Demonic.3b8a6eb0.jpg",
   "static/media/Goroth.jpg": "static/media/Goroth.078f2fb9.jpg",
   "static/media/Harjatan.jpg": "static/media/Harjatan.be8f44d0.jpg",
@@ -11,5 +11,17 @@
   "static/media/Maiden.jpg": "static/media/Maiden.8810a5a4.jpg",
   "static/media/Mistress.jpg": "static/media/Mistress.0cb6742d.jpg",
   "static/media/Sisters.jpg": "static/media/Sisters.f660b6a1.jpg",
-  "static/media/guild_logo_white.svg": "static/media/guild_logo_white.0809a56e.svg"
+  "static/media/aggramar.jpg": "static/media/aggramar.2219483e.jpg",
+  "static/media/argus.jpg": "static/media/argus.01d16eee.jpg",
+  "static/media/coven.jpg": "static/media/coven.044dea07.jpg",
+  "static/media/cover_photo.jpg": "static/media/cover_photo.d7530f0f.jpg",
+  "static/media/eonar.jpg": "static/media/eonar.2eaf5648.jpg",
+  "static/media/felhounds.jpg": "static/media/felhounds.8b884eac.jpg",
+  "static/media/garothi.jpg": "static/media/garothi.f90127bc.jpg",
+  "static/media/guild_logo_white.svg": "static/media/guild_logo_white.0809a56e.svg",
+  "static/media/hasabel.jpg": "static/media/hasabel.3aa5c01d.jpg",
+  "static/media/highcommand.jpg": "static/media/highcommand.1d829c05.jpg",
+  "static/media/imonar.jpg": "static/media/imonar.3287551d.jpg",
+  "static/media/kingaroth.jpg": "static/media/kingaroth.4b1616c6.jpg",
+  "static/media/varimathras.jpg": "static/media/varimathras.c2040cfc.jpg"
 }
