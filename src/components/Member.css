@@ -22,7 +22,7 @@
   height: 100%;
   background-position: 50% 60%;
   background-size: 200%;
-  opacity: 0.9;
+  /*opacity: 0.9;*/
   transition: opacity 0.2s, transform 0.2s;
 }
 
