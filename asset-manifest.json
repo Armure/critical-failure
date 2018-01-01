@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.abb25af5.css",
   "main.css.map": "static/css/main.abb25af5.css.map",
-  "main.js": "static/js/main.95cc048f.js",
-  "main.js.map": "static/js/main.95cc048f.js.map",
+  "main.js": "static/js/main.6d9b34c4.js",
+  "main.js.map": "static/js/main.6d9b34c4.js.map",
   "static/media/Demonic.jpg": "static/media/Demonic.3b8a6eb0.jpg",
   "static/media/Goroth.jpg": "static/media/Goroth.078f2fb9.jpg",
   "static/media/Harjatan.jpg": "static/media/Harjatan.be8f44d0.jpg",
@@ -23,5 +23,6 @@
   "static/media/highcommand.jpg": "static/media/highcommand.1d829c05.jpg",
   "static/media/imonar.jpg": "static/media/imonar.3287551d.jpg",
   "static/media/kingaroth.jpg": "static/media/kingaroth.4b1616c6.jpg",
+  "static/media/ste.jpg": "static/media/ste.34f0aa99.jpg",
   "static/media/varimathras.jpg": "static/media/varimathras.c2040cfc.jpg"
 }
