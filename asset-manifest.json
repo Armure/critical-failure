@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.d376b3c4.css",
-  "main.css.map": "static/css/main.d376b3c4.css.map",
-  "main.js": "static/js/main.6d9b34c4.js",
-  "main.js.map": "static/js/main.6d9b34c4.js.map",
+  "main.css": "static/css/main.d0da4ce9.css",
+  "main.css.map": "static/css/main.d0da4ce9.css.map",
+  "main.js": "static/js/main.4713cce4.js",
+  "main.js.map": "static/js/main.4713cce4.js.map",
   "static/media/Demonic.jpg": "static/media/Demonic.3b8a6eb0.jpg",
   "static/media/Goroth.jpg": "static/media/Goroth.078f2fb9.jpg",
   "static/media/Harjatan.jpg": "static/media/Harjatan.be8f44d0.jpg",
@@ -23,6 +23,8 @@
   "static/media/highcommand.jpg": "static/media/highcommand.1d829c05.jpg",
   "static/media/imonar.jpg": "static/media/imonar.3287551d.jpg",
   "static/media/kingaroth.jpg": "static/media/kingaroth.4b1616c6.jpg",
+  "static/media/news1.jpg": "static/media/news1.5bd0ac39.jpg",
+  "static/media/news2.jpg": "static/media/news2.cd220331.jpg",
   "static/media/ste.jpg": "static/media/ste.34f0aa99.jpg",
   "static/media/varimathras.jpg": "static/media/varimathras.c2040cfc.jpg"
 }
