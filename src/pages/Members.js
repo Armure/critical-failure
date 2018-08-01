@@ -2,13 +2,12 @@ import React from 'react'
 import Member from '../components/Member'
 import './Members.css'
 
-const list = [
+const members = [
   {name: 'Atroce', role: 'dps', traitorRank: 1},
   {name: 'Boltin', role: 'dps', traitorRank: 1},
   {name: 'Blackfoxrun', role: 'dps', traitorRank: 2},
   {name: 'Fuusan', role: 'dps', traitorRank: 1},
-  {name: 'Krazeturtle', role: 'dps', traitorRank: 5},
-  {name: 'Krombôpulos', role: 'tank', traitorRank: 3},
+  {name: 'Oikawa', role: 'tank', traitorRank: 3},
   {name: 'Nemure', role: 'healer', traitorRank: 1},
   {name: 'Papie', role: 'healer', traitorRank: 1},
   {name: 'Rosty', role: 'dps', traitorRank: 1},
@@ -18,16 +17,7 @@ const list = [
   {name: 'Zealnin', role: 'dps', traitorRank: 1}
 ]
 
-class Members extends React.Component {
-  getMembers () {
-    const {data} = this.props
-    if (!data) return null
-    return list.map(m => {
-      const character = data.filter(c => c.name === m.name)[0]
-      return <Member key={m.name} character={character} name={m.name} role={m.role} rank={m.traitorRank} />
-    })
-  }
-
+export default class Members extends React.Component {
   render() {
     return (
       <div className='Members'>
@@ -35,6 +25,13 @@ class Members extends React.Component {
       </div>
     )
   }
-}
 
-export default Members
+  getMembers () {
+    const { data } = this.props
+    if (!data) return null
+    return members.map(({ name, role, traitorRank }, idx) => {
+      const character = data.find(character => character.name === name)
+      return <Member key={idx} character={character} name={name} role={role} rank={traitorRank} />
+    })
+  }
+}
