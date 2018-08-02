@@ -15,7 +15,8 @@ export default class Member extends React.Component {
   }
 
   render () {
-    const {name, role, rank, character} = this.props
+    const { name, role, rank, character } = this.props
+    if (!character) return null
     const roleImage = rolePics[role]
     const main = character.thumbnail.replace(/avatar/gi, 'main')
     const image = `https://render-us.worldofwarcraft.com/character/${main}`

@@ -7,14 +7,15 @@ import NavMenu from './components/NavMenu'
 import logo from './assets/guild_logo_white.svg'
 import './App.css'
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {news: null, members: null}
+    this.state = { news: null, members: null }
   }
 
   componentDidMount () {
-    this.getGuild().then(response => {
+    this.getGuild()
+    .then(response => {
       const json = JSON.parse(response)
       const news = json.news
       const members = json.members.map(member => member.character)
@@ -33,7 +34,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {members} = this.state
+    const { members } = this.state
     return (
       <div className='App'>
         <header className='App-header'>
@@ -53,5 +54,3 @@ class App extends React.Component {
     )
   }
 }
-
-export default App
