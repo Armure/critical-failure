@@ -9,6 +9,9 @@
   background-color: #245224;
   margin: 10px;
   border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 0px 9px 0px #111;
+  box-sizing: border-box;
 }
 
 .Progression-raid {
@@ -22,12 +25,13 @@
   font-weight: 600;
   color: white;
   padding-left: calc(10vw / 18);
+  font-size:
 }
 
 .Progression-bosses {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   position: relative;
 }
