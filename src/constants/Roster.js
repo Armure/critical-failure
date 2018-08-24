@@ -1,0 +1,22 @@
+export default [
+  {name: 'Atroce', role: 'dps', traitorRank: 1},
+  {name: 'Boltin', role: 'dps', traitorRank: 1},
+  {name: 'Corti', role: 'dps', traitorRank: 1},
+  {name: 'Dyahmeister', role: 'dps', traitorRank: 1},
+  {name: 'Fuusan', role: 'dps', traitorRank: 1},
+  {name: 'Jakh', role: 'dps', traitorRank: 1},
+  {name: 'Kaldei', role: 'dps', traitorRank: 1},
+  {name: 'Kusao', role: 'dps', traitorRank: 1},
+  {name: 'Låteralus', role: 'dps', traitorRank: 1},
+  {name: 'Nemure', role: 'healer', traitorRank: 1},
+  {name: 'Oats', role: 'healer', traitorRank: 1},
+  {name: 'Offensivenam', role: 'tank', traitorRank: 1},
+  {name: 'Oikawa', role: 'tank', traitorRank: 1},
+  {name: 'Papie', role: 'healer', traitorRank: 1},
+  {name: 'Rollbacks', role: 'dps', traitorRank: 1},
+  {name: 'Saven', role: 'dps', traitorRank: 1},
+  {name: 'Spookyboogie', role: 'dps', traitorRank: 1},
+  {name: 'Vipirus', role: 'dps', traitorRank: 1},
+  {name: 'Virb', role: 'dps', traitorRank: 1},
+  {name: 'Zealnin', role: 'dps', traitorRank: 1}
+]
