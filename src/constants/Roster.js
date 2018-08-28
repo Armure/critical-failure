@@ -1,7 +1,6 @@
 export default [
   {name: 'Atroce', role: 'dps', traitorRank: 1},
   {name: 'Boltin', role: 'dps', traitorRank: 1},
-  {name: 'Corti', role: 'dps', traitorRank: 1},
   {name: 'Dyahmeister', role: 'dps', traitorRank: 1},
   {name: 'Fuusan', role: 'dps', traitorRank: 1},
   {name: 'Jakh', role: 'dps', traitorRank: 1},
@@ -13,6 +12,7 @@ export default [
   {name: 'Offensivenam', role: 'tank', traitorRank: 1},
   {name: 'Oikawa', role: 'tank', traitorRank: 1},
   {name: 'Papie', role: 'healer', traitorRank: 1},
+  {name: 'Pelitien', role: 'dps', traitorRank: 1},
   {name: 'Rollbacks', role: 'dps', traitorRank: 1},
   {name: 'Saven', role: 'dps', traitorRank: 1},
   {name: 'Spookyboogie', role: 'dps', traitorRank: 1},

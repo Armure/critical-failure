@@ -9,6 +9,7 @@
   font-size: 12px;
   background-color: #444;
   color: white;
+  flex-direction: column;
 }
 
 .NewsItem-info {

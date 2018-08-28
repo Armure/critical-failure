@@ -14,7 +14,6 @@ export default class Members extends React.Component {
 
   getMembers () {
     const { data } = this.props
-    console.log(data)
     if (!data) return null
     return roster.map(({ name, role, traitorRank }, idx) => {
       const character = data.find(character => character.name === name)
