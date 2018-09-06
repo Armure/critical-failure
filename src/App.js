@@ -21,6 +21,7 @@ export default class App extends React.Component {
       const members = json.members.map(member => member.character)
       this.setState({news, members})
     })
+    .catch(err => console.error(err))
   }
 
   getGuild () {
