@@ -1,7 +1,6 @@
 export default [
   {name: 'Atroce', role: 'dps', traitorRank: 1},
   {name: 'Boltin', role: 'dps', traitorRank: 1},
-  {name: 'Dyahmeister', role: 'dps', traitorRank: 1},
   {name: 'Fuusan', role: 'dps', traitorRank: 1},
   {name: 'Kaldei', role: 'dps', traitorRank: 1},
   {name: 'Kusao', role: 'dps', traitorRank: 1},
