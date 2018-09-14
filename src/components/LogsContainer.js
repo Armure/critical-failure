@@ -1,10 +1,12 @@
 import React from 'react'
 import './LogsContainer.css'
 
+const liveTag = `[LIVE]`
+
 class LogsContainer extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {logs: null}
+    this.state = { logs: null }
   }
 
   componentDidMount () {
@@ -26,9 +28,9 @@ class LogsContainer extends React.Component {
   }
 
   getLatestLog () {
-    const {logs} = this.state
+    const { logs } = this.state
     if (!logs || !logs.length) return null
-    const latestLog = logs[logs.length - 1]
+    const latestLog = logs[0]
     const date = new Date(latestLog.start)
     const link = `https://www.warcraftlogs.com/reports/${latestLog.id}`
     const live = latestLog.end === latestLog.start
@@ -37,13 +39,12 @@ class LogsContainer extends React.Component {
       <a className='LogsContainer-latest' href={link} target='_blank'>
         <p className='LogsContainer-latest-title'>{latestLog.title}</p>
         <p className='LogsContainer-latest-date'>{`${date.toDateString()}`}</p>
-        {live && <p className='LogsContainer-latest-live'>[LIVE]</p>}
+        { live && <p className='LogsContainer-latest-live'>{liveTag}</p> }
       </a>
     )
   }
 
   render() {
-
     return (
       <div className='LogsContainer'>
         <p className='LogsContainer-title'>Latest Log</p>
