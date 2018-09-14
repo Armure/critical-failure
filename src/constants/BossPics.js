@@ -20,6 +20,15 @@ import coven from '../assets/bosses/antorus/coven.jpg'
 import aggramar from '../assets/bosses/antorus/aggramar.jpg'
 import argus from '../assets/bosses/antorus/argus.jpg'
 
+import taloc from '../assets/bosses/uldir/taloc.jpg'
+import mother from '../assets/bosses/uldir/mother.jpg'
+import fetid from '../assets/bosses/uldir/fetid.jpg'
+import zekvoz from '../assets/bosses/uldir/zekvoz.jpg'
+import vectis from '../assets/bosses/uldir/vectis.jpg'
+import zul from '../assets/bosses/uldir/zul.jpg'
+import mythrax from '../assets/bosses/uldir/mythrax.jpg'
+import ghuun from '../assets/bosses/uldir/ghuun.jpg'
+
 export default {
   [`Goroth`]: goroth,
   [`Demonic Inquisition`]: demonic,
@@ -30,6 +39,7 @@ export default {
   [`Maiden of Vigilance`]: maiden,
   [`Fallen Avatar`]: avatar,
   [`Kil'jaeden`]: kiljaeden,
+
   [`Garothi Worldbreaker`]: garothi,
   [`Felhounds of Sargeras`]: felhounds,
   [`Antoran High Command`]: highcommand,
@@ -40,5 +50,14 @@ export default {
   [`Varimathras`]: varimathras,
   [`The Coven of Shivarra`]: coven,
   [`Aggramar`]: aggramar,
-  [`Argus the Unmaker`]: argus
+  [`Argus the Unmaker`]: argus,
+
+  [`Taloc the Corrupted`]: taloc,
+  [`MOTHER`]: mother,
+  [`Fetid Devourer`]: fetid,
+  [`Zek'voz, Herald of N'zoth`]: zekvoz,
+  [`Vectis`]: vectis,
+  [`Zul, Reborn`]: zul,
+  [`Mythrax the Unraveler`]: mythrax,
+  [`G'huun`]: ghuun,
 }

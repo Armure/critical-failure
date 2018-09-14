@@ -20,19 +20,28 @@ import coven from '../assets/bosses/antorus/coven.jpg'
 import aggramar from '../assets/bosses/antorus/aggramar.jpg'
 import argus from '../assets/bosses/antorus/argus.jpg'
 
+import taloc from '../assets/bosses/uldir/taloc.jpg'
+import mother from '../assets/bosses/uldir/mother.jpg'
+import fetid from '../assets/bosses/uldir/fetid.jpg'
+import zekvoz from '../assets/bosses/uldir/zekvoz.jpg'
+import vectis from '../assets/bosses/uldir/vectis.jpg'
+import zul from '../assets/bosses/uldir/zul.jpg'
+import mythrax from '../assets/bosses/uldir/mythrax.jpg'
+import ghuun from '../assets/bosses/uldir/ghuun.jpg'
+
 export default [
   {
     name: 'Uldir',
     expansion: 'Battle for Azeroth',
     bosses: [
-      { name: `Taloc the Corrupted`, image: null, killed: { normal: false, heroic: false, mythic: false } },
-      { name: `MOTHER`, image: null, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Fetid Devourer`, image: null, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Zek'voz, Herald of N'zoth`, image: null, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Vectis`, image: null, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Zul, Reborn`, image: null, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Mythrax the Unraveler`, image: null, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `G'huun`, image: null, killed: { normal: false, heroic: false, mythic: false }  },
+      { name: `Taloc the Corrupted`, image: taloc, killed: { normal: false, heroic: false, mythic: false } },
+      { name: `MOTHER`, image: mother, killed: { normal: false, heroic: false, mythic: false }  },
+      { name: `Fetid Devourer`, image: fetid, killed: { normal: false, heroic: false, mythic: false }  },
+      { name: `Zek'voz, Herald of N'zoth`, image: zekvoz, killed: { normal: false, heroic: false, mythic: false }  },
+      { name: `Vectis`, image: vectis, killed: { normal: false, heroic: false, mythic: false }  },
+      { name: `Zul, Reborn`, image: zul, killed: { normal: false, heroic: false, mythic: false }  },
+      { name: `Mythrax the Unraveler`, image: mythrax, killed: { normal: false, heroic: false, mythic: false }  },
+      { name: `G'huun`, image: ghuun, killed: { normal: false, heroic: false, mythic: false }  },
     ]
   },
   {
