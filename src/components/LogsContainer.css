@@ -8,12 +8,14 @@
   margin: 10px;
   box-sizing: border-box;
   font-size: 12px;
-  background-color: #444;
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
 }
 
 .LogsContainer-title {
   font-size: 18px;
+  font-family: 'Syncopate', sans-serif;
+  color: #BC3908;
 }
 
 .LogsContainer-latest {
@@ -23,23 +25,26 @@
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.15s linear;
+}
+
+.LogsContainer-latest:hover {
+  background-color: #F6AA1C;
 }
 
 .LogsContainer-latest-title {
   margin: 5px;
-  color: #87B6A7;
-}
-
-.LogsContainer-latest:hover {
-  color: #FFFFFF !important;
+  color: #941B0C;
 }
 
 .LogsContainer-latest-date {
   margin: 5px;
-  color: white;
+  color: #621708;
 }
 
 .LogsContainer-latest-live {
   margin: 5px;
-  color: red;
+  color: #941B0C;
 }

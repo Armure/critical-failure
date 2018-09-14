@@ -4,18 +4,20 @@
 
 .Home-body {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: #eee;
 }
 
-.Home-loot {
+.Home-news {
   position: relative;
-  width: 70%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
 }
 
 .Home-logs {
-  width: 30%;
+  align-self: center;
 }
 
 .News-photo {

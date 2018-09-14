@@ -43,8 +43,9 @@ export default class App extends React.Component {
             <div className='App-overlay' />
           </div>
           <Link className='App-name' to='/'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <h1 className='App-title'>Critical Failure</h1>
+            <h1 className='App-title'>
+              Critical <img src={logo} className='App-logo' alt='logo' /> Failure
+            </h1>
           </Link>
           <NavMenu />
         </header>
