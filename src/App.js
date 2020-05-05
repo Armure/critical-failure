@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Members from './pages/Members'
 import Progression from './pages/Progression'
 import NavMenu from './components/NavMenu'
-import logo from './assets/guild_logo_white.svg'
 import './App.css'
 
 export default class App extends React.Component {
@@ -34,24 +33,34 @@ export default class App extends React.Component {
     })
   }
 
+  // render() {
+  //   const { members } = this.state
+  //   return (
+  //     <div className='App'>
+  //       <header className='App-header'>
+  //         <div className='App-background'>
+  //           <div className='App-overlay' />
+  //         </div>
+  //         <Link className='App-name' to='/'>
+  //           <h1 className='App-title'>
+  //             Critical <img src={logo} className='App-logo' alt='logo' /> Failure
+  //           </h1>
+  //         </Link>
+  //         <NavMenu />
+  //       </header>
+  //       <Route exact path='/' component={() => <Home />} />
+  //       <Route path='/raiders' component={() => <Members data={members} />} />
+  //       <Route path='/progression' component={() => <Progression />} />
+  //     </div>
+  //   )
+  // }
+
   render() {
     const { members } = this.state
     return (
       <div className='App'>
-        <header className='App-header'>
-          <div className='App-background'>
-            <div className='App-overlay' />
-          </div>
-          <Link className='App-name' to='/'>
-            <h1 className='App-title'>
-              Critical <img src={logo} className='App-logo' alt='logo' /> Failure
-            </h1>
-          </Link>
-          <NavMenu />
-        </header>
+        <NavMenu />
         <Route exact path='/' component={() => <Home />} />
-        <Route path='/raiders' component={() => <Members data={members} />} />
-        <Route path='/progression' component={() => <Progression />} />
       </div>
     )
   }

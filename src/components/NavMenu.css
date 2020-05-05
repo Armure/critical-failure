@@ -2,17 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.NavMenu-item {
-  color: #aaa;
-  font-size: 22px;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: 400;
-  transition: color 0.2s;
-}
-
-.NavMenu-item:hover {
-  color: white;
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+  /* background: black; */
 }

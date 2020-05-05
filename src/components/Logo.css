@@ -1,0 +1,27 @@
+.Logo {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 800;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-wrap: nowrap;
+  transition: color 0.2s;
+}
+
+.Logo:hover {
+  color: white;
+}
+
+.Logo-image {
+  width: 60px;
+  margin-right: 16px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.Logo:hover .Logo-image {
+  opacity: 1.0;
+}
