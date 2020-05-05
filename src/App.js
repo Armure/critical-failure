@@ -1,66 +1,66 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
+import About from './pages/About'
 import Members from './pages/Members'
 import Progression from './pages/Progression'
 import NavMenu from './components/NavMenu'
+import roster from './constants/Roster'
 import './App.css'
 
 export default class App extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { news: null, members: null }
+    this.state = { members: null }
   }
 
   componentDidMount () {
     this.getGuild()
-    .then(response => {
-      const json = JSON.parse(response)
-      const news = json.news
-      const members = json.members.map(member => member.character)
-      this.setState({news, members})
+    .then(guild => {
+      const validCharacters = roster.reduce((acc, { name }, idx) => {
+        const member = guild.members.find(({ character }) => character.name === name)
+        if (member) acc.push(member.character)
+        return acc
+      }, [])
+      console.log(validCharacters)
+
+      const characterInfoPromises = validCharacters.map((character, idx) => {
+        return this.getCharacterInfo(character)
+      })
+
+      return Promise.all(characterInfoPromises)
+    })
+    .then(members => {
+      this.setState({ members })
     })
     .catch(err => console.error(err))
   }
 
-  getGuild () {
-    return new Promise((resolve, reject) => {
-      const xhr = new XMLHttpRequest()
-      xhr.open("GET", `https://us.api.battle.net/wow/guild/Frostmane/Critical%20Failure?fields=news%2C+members&locale=en_US&apikey=c93sxduxdezc4axs5bnzjwv5w8a579ep`)
-      xhr.onload = () => resolve(xhr.responseText)
-      xhr.onerror = () => reject(xhr.statusText)
-      xhr.send()
-    })
+  getCharacterInfo (character) {
+    const { name, realm } = character
+    const { slug } = realm
+
+    return fetch(`https://us.api.blizzard.com/profile/wow/character/${slug}/${name.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=US8VXpx7FkT7KHimabXnBISHVqdrLaY5tl`)
+    .then(response => response.json())
+    .then(({ render_url: imageUrl }) => ({ name, realm: slug, imageUrl }))
   }
 
-  // render() {
-  //   const { members } = this.state
-  //   return (
-  //     <div className='App'>
-  //       <header className='App-header'>
-  //         <div className='App-background'>
-  //           <div className='App-overlay' />
-  //         </div>
-  //         <Link className='App-name' to='/'>
-  //           <h1 className='App-title'>
-  //             Critical <img src={logo} className='App-logo' alt='logo' /> Failure
-  //           </h1>
-  //         </Link>
-  //         <NavMenu />
-  //       </header>
-  //       <Route exact path='/' component={() => <Home />} />
-  //       <Route path='/raiders' component={() => <Members data={members} />} />
-  //       <Route path='/progression' component={() => <Progression />} />
-  //     </div>
-  //   )
-  // }
+  getGuild () {
+    return fetch('https://us.api.blizzard.com/data/wow/guild/frostmane/critical-failure/roster?namespace=profile-us&access_token=US8VXpx7FkT7KHimabXnBISHVqdrLaY5tl')
+    .then(response => response.json())
+  }
 
   render() {
     const { members } = this.state
     return (
       <div className='App'>
         <NavMenu />
-        <Route exact path='/' component={() => <Home />} />
+        <div className='App-page'>
+          <Route exact path='/' component={() => <Home />} />
+          <Route path='/about' component={() => <About />} />
+          <Route path='/raiders' component={() => <Members data={members} />} />
+          <Route path='/progression' component={() => <Progression />} />
+        </div>
       </div>
     )
   }

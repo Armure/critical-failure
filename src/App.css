@@ -4,51 +4,7 @@
   text-align: center;
 }
 
-.App-header {
-  position: relative;
-  padding: 35px;
-  color: white;
-}
-
-.App-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url('./assets/cover_photo.jpg') center no-repeat;
-  background-size: cover;
+.App-page {
+  padding-top: 200px;
   z-index: -1;
-}
-
-.App-overlay {
-  background-color: #000;
-  opacity: 0.2;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.App-name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  cursor: default;
-}
-
-.App-logo {
-  height: 120px;
-  margin: 0 16px;
-}
-
-.App-title {
-  font-family: 'Syncopate', sans-serif;
-  font-size: 3em;
-  margin: 20px;
-  color: white;
-  display: flex;
-  align-items: center;
 }

@@ -1,8 +1,25 @@
-.Members {
+.Members-body {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Members-title {
+  color: #aaa;
+  font-weight: 800;
+  font-size: 36px;
+  margin-bottom: 64px;
+  padding-top: 32px;
+}
+
+.Members-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 64px 32px;
+  align-items: center;
+  justify-items: center;
   width: 100%;
   position: relative;
+  padding: 0 120px;
+  box-sizing: border-box;
 }

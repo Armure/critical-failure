@@ -7,7 +7,12 @@ export default class Members extends React.Component {
   render() {
     return (
       <div className='Members'>
-        {this.getMembers()}
+        <div className='Members-body'>
+          <div className='Members-title'>RAIDERS</div>
+        </div>
+        <div className='Members-list'>
+          { this.getMembers() }
+        </div>
       </div>
     )
   }
@@ -15,9 +20,9 @@ export default class Members extends React.Component {
   getMembers () {
     const { data } = this.props
     if (!data) return null
-    return roster.map(({ name, role, traitorRank }, idx) => {
-      const character = data.find(character => character.name === name)
-      return <Member key={idx} character={character} name={name} role={role} rank={traitorRank} />
+
+    return data.map((character, idx) => {
+      return <Member key={idx} character={character} />
     })
   }
 }
