@@ -9,7 +9,7 @@
   margin: 10px;
   padding: 10px;
   box-sizing: border-box;
-  font-family: 'Syncopate', sans-serif;
+  /* font-family: 'Syncopate', sans-serif; */
 }
 
 .Progression-raid {
@@ -20,8 +20,8 @@
 }
 
 .Progression-name {
-  font-weight: 600;
-  color: #BC3908;
+  font-weight: 800;
+  color: #fefefe;
   padding-left: calc(10vw / 18);
   text-align: left;
 }

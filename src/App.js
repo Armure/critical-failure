@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Members from './pages/Members'
@@ -17,12 +17,15 @@ export default class App extends React.Component {
   componentDidMount () {
     this.getGuild()
     .then(guild => {
-      const validCharacters = roster.reduce((acc, { name }, idx) => {
+      const validCharacters = roster.reduce((acc, entry, idx) => {
+        const { name, fallback } = entry
         const member = guild.members.find(({ character }) => character.name === name)
-        if (member) acc.push(member.character)
+        if (member) {
+          member.character.fallback = fallback
+          acc.push(member.character)
+        }
         return acc
       }, [])
-      console.log(validCharacters)
 
       const characterInfoPromises = validCharacters.map((character, idx) => {
         return this.getCharacterInfo(character)
@@ -37,12 +40,25 @@ export default class App extends React.Component {
   }
 
   getCharacterInfo (character) {
-    const { name, realm } = character
+    const { name, realm, fallback } = character
     const { slug } = realm
 
     return fetch(`https://us.api.blizzard.com/profile/wow/character/${slug}/${name.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=US8VXpx7FkT7KHimabXnBISHVqdrLaY5tl`)
-    .then(response => response.json())
-    .then(({ render_url: imageUrl }) => ({ name, realm: slug, imageUrl }))
+    .then(response => {
+      if (!response.ok) return { render_url: fallback.imageUrl }
+      return response.json()
+    })
+    .then(({ render_url: imageUrl }) => {
+      return fetch(`https://us.api.blizzard.com/profile/wow/character/${slug}/${name.toLowerCase()}?namespace=profile-us&locale=en_US&access_token=US8VXpx7FkT7KHimabXnBISHVqdrLaY5tl`)
+      .then(response => {
+        if (!response.ok) return { achievement_points: fallback.achievements, equipped_item_level: fallback.ilvl, level: fallback.level, race: { name: fallback.race }, character_class: { name: fallback.characterClass }, active_spec: { name: fallback.spec }, active_title: {} }
+        return response.json()
+      })
+      .then((info) => {
+        const { achievement_points: achievements, equipped_item_level: ilvl, race, character_class: characterClass, level, active_spec: spec, active_title: title } = info
+        return { name, realm: slug, imageUrl, achievements, ilvl, level, race: race.name, characterClass: characterClass.name, spec: spec.name, title }
+      })
+    })
   }
 
   getGuild () {

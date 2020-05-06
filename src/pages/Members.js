@@ -1,6 +1,5 @@
 import React from 'react'
 import Member from '../components/Member'
-import roster from '../constants/Roster'
 import './Members.css'
 
 export default class Members extends React.Component {

@@ -3,11 +3,6 @@ import BossItem from '../components/BossItem'
 import raids from '../constants/Raids'
 import './Progression.css'
 
-const expansionColors = {
-  'Legion': '#245224',
-  'Battle for Azeroth': '#22344e'
-}
-
 export default class Progression extends React.Component {
   render() {
     return (
@@ -23,7 +18,7 @@ export default class Progression extends React.Component {
       return (
         <div key={name} className='Progression'>
           <div className='Progression-raid'>
-            <h1 className='Progression-name'>{name}</h1>
+            <h1 className='Progression-name'>{name.toUpperCase()}</h1>
           </div>
           <div className='Progression-bosses'>
             { this.getBosses(bosses) }

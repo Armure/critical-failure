@@ -34,14 +34,14 @@ export default [
     name: 'Uldir',
     expansion: 'Battle for Azeroth',
     bosses: [
-      { name: `Taloc the Corrupted`, image: taloc, killed: { normal: false, heroic: false, mythic: false } },
-      { name: `MOTHER`, image: mother, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Fetid Devourer`, image: fetid, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Zek'voz, Herald of N'zoth`, image: zekvoz, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Vectis`, image: vectis, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Zul, Reborn`, image: zul, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `Mythrax the Unraveler`, image: mythrax, killed: { normal: false, heroic: false, mythic: false }  },
-      { name: `G'huun`, image: ghuun, killed: { normal: false, heroic: false, mythic: false }  },
+      { name: `Taloc the Corrupted`, image: taloc, killed: { normal: true, heroic: true, mythic: false } },
+      { name: `MOTHER`, image: mother, killed: { normal: true, heroic: true, mythic: false }  },
+      { name: `Fetid Devourer`, image: fetid, killed: { normal: true, heroic: true, mythic: false }  },
+      { name: `Zek'voz, Herald of N'zoth`, image: zekvoz, killed: { normal: true, heroic: true, mythic: false }  },
+      { name: `Vectis`, image: vectis, killed: { normal: true, heroic: true, mythic: false }  },
+      { name: `Zul, Reborn`, image: zul, killed: { normal: true, heroic: false, mythic: false }  },
+      { name: `Mythrax the Unraveler`, image: mythrax, killed: { normal: true, heroic: false, mythic: false }  },
+      { name: `G'huun`, image: ghuun, killed: { normal: true, heroic: false, mythic: false }  },
     ]
   },
   {

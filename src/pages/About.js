@@ -1,8 +1,6 @@
 import React from 'react'
 import Gallery from 'react-photo-gallery'
 import Lightbox from 'react-images'
-import NewsItem from '../components/NewsItem'
-import LogsContainer from '../components/LogsContainer'
 import photos from '../constants/NewsPhotos'
 import './About.css'
 
