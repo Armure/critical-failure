@@ -15,41 +15,45 @@ export default class App extends React.Component {
   }
 
   componentDidMount () {
-    this.getGuild()
-    .then(guild => {
-      const validCharacters = roster.reduce((acc, entry, idx) => {
-        const { name, fallback } = entry
-        const member = guild.members.find(({ character }) => character.name === name)
-        if (member) {
-          member.character.fallback = fallback
-          acc.push(member.character)
-        }
-        return acc
-      }, [])
+    fetch('https://pacific-stream-55011.herokuapp.com/token')
+    .then(response => response.json())
+    .then(({ token }) => {
+      this.getGuild(token)
+      .then(guild => {
+        const validCharacters = roster.reduce((acc, entry, idx) => {
+          const { name, fallback } = entry
+          const member = guild.members.find(({ character }) => character.name === name)
+          if (member) {
+            member.character.fallback = fallback
+            acc.push(member.character)
+          }
+          return acc
+        }, [])
 
-      const characterInfoPromises = validCharacters.map((character, idx) => {
-        return this.getCharacterInfo(character)
+        const characterInfoPromises = validCharacters.map((character, idx) => {
+          return this.getCharacterInfo(token, character)
+        })
+
+        return Promise.all(characterInfoPromises)
       })
-
-      return Promise.all(characterInfoPromises)
+      .then(members => {
+        this.setState({ members })
+      })
+      .catch(err => console.error(err))
     })
-    .then(members => {
-      this.setState({ members })
-    })
-    .catch(err => console.error(err))
   }
 
-  getCharacterInfo (character) {
+  getCharacterInfo (token, character) {
     const { name, realm, fallback } = character
     const { slug } = realm
 
-    return fetch(`https://us.api.blizzard.com/profile/wow/character/${slug}/${name.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=US8VXpx7FkT7KHimabXnBISHVqdrLaY5tl`)
+    return fetch(`https://us.api.blizzard.com/profile/wow/character/${slug}/${name.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=${token}`)
     .then(response => {
       if (!response.ok) return { render_url: fallback.imageUrl }
       return response.json()
     })
     .then(({ render_url: imageUrl }) => {
-      return fetch(`https://us.api.blizzard.com/profile/wow/character/${slug}/${name.toLowerCase()}?namespace=profile-us&locale=en_US&access_token=US8VXpx7FkT7KHimabXnBISHVqdrLaY5tl`)
+      return fetch(`https://us.api.blizzard.com/profile/wow/character/${slug}/${name.toLowerCase()}?namespace=profile-us&locale=en_US&access_token=${token}`)
       .then(response => {
         if (!response.ok) return { achievement_points: fallback.achievements, equipped_item_level: fallback.ilvl, level: fallback.level, race: { name: fallback.race }, character_class: { name: fallback.characterClass }, active_spec: { name: fallback.spec }, active_title: {} }
         return response.json()
@@ -61,8 +65,8 @@ export default class App extends React.Component {
     })
   }
 
-  getGuild () {
-    return fetch('https://us.api.blizzard.com/data/wow/guild/frostmane/critical-failure/roster?namespace=profile-us&access_token=US8VXpx7FkT7KHimabXnBISHVqdrLaY5tl')
+  getGuild (token) {
+    return fetch(`https://us.api.blizzard.com/data/wow/guild/frostmane/critical-failure/roster?namespace=profile-us&access_token=${token}`)
     .then(response => response.json())
   }
 
